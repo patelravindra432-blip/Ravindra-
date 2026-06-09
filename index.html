@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravindra Patel | Tech Portfolio</title>
+    <title>Ravindra Patel | Portfolio</title>
     <style>
-        /* Modern CSS Design */
+        /* Modern & Attractive Design */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0d1117; 
@@ -16,22 +16,22 @@
         }
         header {
             background: linear-gradient(135deg, #00c6ff, #0072ff); 
-            padding: 70px 20px;
+            padding: 60px 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             color: white;
         }
-        header h1 { margin: 0; font-size: 3em; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        header p { font-size: 1.3em; opacity: 0.95; margin-top: 10px; }
-        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        header h1 { margin: 0; font-size: 2.8em; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header p { font-size: 1.2em; opacity: 0.95; margin-top: 10px; }
+        .container { max-width: 850px; margin: 30px auto; padding: 20px; }
 
-        /* Dynamic Cards */
+        /* Clean Cards */
         .card {
             background: #161b22;
-            padding: 25px;
+            padding: 22px;
             margin: 20px 0;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             transition: transform 0.3s, border-left 0.3s;
             border: 1px solid #30363d;
         }
@@ -39,10 +39,12 @@
             transform: translateY(-5px);
             border-left: 5px solid #00c6ff;
         }
-        .card h3 { color: #58a6ff; margin-top: 0; font-size: 1.4em; }
-        .card p { line-height: 1.6; color: #8b949e; }
+        .card h3 { color: #58a6ff; margin-top: 0; font-size: 1.3em; }
+        .card p { line-height: 1.6; color: #8b949e; margin-bottom: 0; }
+        .card ul { margin-top: 10px; padding-left: 20px; color: #8b949e; }
+        .card li { margin-bottom: 5px; }
 
-        /* Interactive Elements */
+        /* Buttons & Badges */
         .dynamic-btn {
             background: linear-gradient(135deg, #00c6ff, #0072ff);
             color: white;
@@ -50,7 +52,7 @@
             padding: 12px 30px;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 1.1em;
+            font-size: 1.05em;
             font-weight: bold;
             transition: transform 0.2s, box-shadow 0.2s;
             margin-top: 10px;
@@ -60,31 +62,31 @@
         #time-display {
             font-weight: bold;
             color: #ffffff;
-            margin-top: 20px;
-            font-size: 1.1em;
+            margin-top: 15px;
+            font-size: 1.05em;
             background: rgba(0,0,0,0.3);
             display: inline-block;
-            padding: 8px 20px;
+            padding: 6px 18px;
             border-radius: 25px;
             border: 1px solid rgba(255,255,255,0.2);
         }
 
         /* Skills Tags */
-        .skills { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+        .skills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
         .skill-tag {
             background: #21262d;
-            padding: 10px 18px;
+            padding: 8px 16px;
             border-radius: 20px;
-            font-size: 0.95em;
+            font-size: 0.9em;
             border: 1px solid #30363d;
             color: #58a6ff;
             font-weight: 500;
         }
 
-        /* Form Styling */
+        /* Form Fields */
         input, textarea {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             margin: 10px 0;
             border-radius: 8px;
             border: 1px solid #30363d;
@@ -92,7 +94,7 @@
             color: white;
             box-sizing: border-box;
             font-family: inherit;
-            font-size: 1em;
+            font-size: 0.95em;
         }
         input:focus, textarea:focus {
             border-color: #00c6ff;
@@ -100,11 +102,11 @@
             box-shadow: 0 0 8px rgba(0, 198, 255, 0.3);
         }
 
-        /* Light Theme Classes */
+        /* Light Theme Options */
         .light-mode { background-color: #f6f8fa; color: #24292f; }
         .light-mode .card { background: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #d0d7de; }
         .light-mode .card h3 { color: #0969da; }
-        .light-mode .card p { color: #57606a; }
+        .light-mode .card p, .light-mode .card ul { color: #57606a; }
         .light-mode .skill-tag { background: #ddf4ff; color: #0969da; border-color: #54aeff; }
         .light-mode input, .light-mode textarea { background: #ffffff; color: #000; border: 1px solid #d0d7de; }
     </style>
@@ -113,41 +115,43 @@
 
     <header>
         <h1>Ravindra Patel</h1>
-        <p>BCA Student @ Silver Oak College of Computer Application (SOCCA)</p>
-        <p style="font-size: 1.1em; opacity: 0.8;">Innovating in AI, Machine Learning & IoT</p>
+        <p>Bachelor of Computer Applications (BCA) Student</p>
         <div id="time-display">Loading time...</div>
     </header>
 
     <div class="container">
-        <h2>🛠️ Technical Arsenal</h2>
+        
+        <h2>🎓 Education</h2>
+        <div class="card">
+            <h3>Silver Oak College of Computer Application (SOCCA)</h3>
+            <p><strong>Degree:</strong> Bachelor of Computer Applications (BCA)</p>
+            <p>Focusing on software development, database management, and modern tech applications.</p>
+        </div>
+
+        <h2>🛠️ Technical Skills & Coursework</h2>
         <div class="skills">
-            <span class="skill-tag">Artificial Intelligence</span>
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">IoT Applications & Smart Systems</span>
-            <span class="skill-tag">Data Visualization (Power BI)</span>
+            <span class="skill-tag">Artificial Intelligence (AI)</span>
+            <span class="skill-tag">Machine Learning (ML)</span>
+            <span class="skill-tag">Internet of Things (IoT)</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">HTML / CSS / JavaScript</span>
         </div>
 
-        <h2>🚀 Experience & Hackathons</h2>
+        <h2>💻 Academic Focus Areas</h2>
         <div class="card">
-            <h3>ADS Foundation - Internship</h3>
-            <p>Selected for a professional internship program, gaining practical industry exposure and applying academic knowledge to real-world scenarios.</p>
+            <h3>🌐 IoT Applications & Smart Systems</h3>
+            <p>Studying internet-connected smart devices, automation, and core communication hardware setups.</p>
         </div>
         <div class="card">
-            <h3>Brahma Code 2.0 Hackathon</h3>
-            <p>Participated in the competitive coding and development hackathon at SKIPS University, demonstrating problem-solving skills under pressure.</p>
-        </div>
-
-        <h2>💻 Academic Focus & Projects</h2>
-        <div class="card">
-            <h3>🌐 IoT Smart Systems</h3>
-            <p>Working on internet-connected devices, communication units, and automation setups as part of advanced coursework.</p>
+            <h3>📊 Data Visualization & Reporting</h3>
+            <p>Learning how to convert raw data into reports using practical visuals like Column charts, Bar charts, and Matrix layouts.</p>
         </div>
 
-        <h2>📩 Get In Touch</h2>
+        <h2>📩 Contact Me</h2>
         <div class="card">
-            <p>Have a project idea or want to connect? Send me a message!</p>
+            <p>Agar aap mujhse connect hona chahte hain ya koi sawal hai, toh niche form bharein!</p>
             
-            <form action="https://formsubmit.co/patelravindra432email@gmail.com" method="POST">
+            <form action="https://formsubmit.co/patelravindra432@gmail.com" method="POST">
                 
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
@@ -160,8 +164,8 @@
             </form>
         </div>
 
-        <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-            <button class="dynamic-btn" onclick="toggleTheme()" style="background: #333;">🌓 Toggle Light/Dark Mode</button>
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+            <button class="dynamic-btn" onclick="toggleTheme()" style="background: #333;">🌓 Change Theme Mode</button>
         </div>
     </div>
 
