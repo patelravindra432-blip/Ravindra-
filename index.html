@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Portfolio</title>
+    <style>
+        /* Modern CSS Design */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #121212; 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 0; 
+            transition: 0.4s;
+        }
+        header { 
+            background: linear-gradient(135deg, #6e8efb, #a777e3); 
+            padding: 60px 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        header h1 { margin: 0; font-size: 2.8em; letter-spacing: 1px; }
+        header p { font-size: 1.2em; opacity: 0.9; }
+        .container { max-width: 900px; margin: 30px auto; padding: 20px; }
+        
+        /* Dynamic Cards */
+        .card { 
+            background: #1e1e1e; 
+            padding: 20px 25px; 
+            margin: 20px 0; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+            transition: transform 0.3s, border-left 0.3s; 
+            cursor: pointer; 
+        }
+        .card:hover { 
+            transform: translateY(-8px); 
+            border-left: 5px solid #a777e3; 
+        }
+        .card h3 { color: #a777e3; margin-top: 0; }
+        
+        /* Interactive Elements */
+        .dynamic-btn { 
+            background-color: #a777e3; 
+            color: white; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 1.1em; 
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s; 
+        }
+        .dynamic-btn:hover { background-color: #6e8efb; transform: scale(1.05); }
+        
+        #time-display { 
+            font-weight: bold; 
+            color: #ffeb3b; 
+            margin-top: 15px; 
+            font-size: 1.1em;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* Skills Tags */
+        .skills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+        .skill-tag { 
+            background: #333; 
+            padding: 8px 15px; 
+            border-radius: 20px; 
+            font-size: 0.95em; 
+            border: 1px solid #555;
+        }
+        
+        /* Light Theme Classes */
+        .light-mode { background-color: #f4f4f9; color: #333; }
+        .light-mode .card { background: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); color: #333;}
+        .light-mode .skill-tag { background: #e0e0e0; color: #000; border-color: #ccc;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Workspace</h1>
+        <p>Exploring the Future of Technology & Development</p>
+        <div id="time-display">Loading time...</div>
+    </header>
+
+    <div class="container">
+        <h2>My Core Skills</h2>
+        <div class="skills">
+            <span class="skill-tag">Artificial Intelligence & ML</span>
+            <span class="skill-tag">Internet of Things (IoT)</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Web Development</span>
+        </div>
+
+        <h2>Featured Projects</h2>
+        
+        <div class="card" onclick="alert('Opening details for AI Project...')">
+            <h3>🤖 AI & Machine Learning Model</h3>
+            <p>A smart prediction system designed to analyze data patterns and provide accurate outputs.</p>
+        </div>
+
+        <div class="card" onclick="alert('Opening details for IoT System...')">
+            <h3>🌐 Smart IoT Applications</h3>
+            <p>Connecting hardware devices through the internet to create automated smart environments.</p>
+        </div>
+
+        <div class="card" onclick="alert('Opening details for Data Dashboard...')">
+            <h3>📊 Interactive Data Dashboard</h3>
+            <p>Transforming complex datasets into visually appealing and easy-to-understand reports.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
+            <button class="dynamic-btn" onclick="toggleTheme()">🌓 Change Theme</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Dynamic Live Clock
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time-display').innerText = "Live Time: " + now.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // JavaScript for Dynamic Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+
+</body>
+</html>
