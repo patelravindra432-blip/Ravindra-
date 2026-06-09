@@ -3,133 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tech Portfolio</title>
+    <title>Ravindra Patel | Tech Portfolio</title>
     <style>
         /* Modern CSS Design */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #121212; 
-            color: #ffffff; 
-            margin: 0; 
-            padding: 0; 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117; 
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
             transition: 0.4s;
         }
-        header { 
-            background: linear-gradient(135deg, #6e8efb, #a777e3); 
-            padding: 60px 20px; 
-            text-align: center; 
+        header {
+            background: linear-gradient(135deg, #00c6ff, #0072ff); 
+            padding: 70px 20px;
+            text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            color: white;
         }
-        header h1 { margin: 0; font-size: 2.8em; letter-spacing: 1px; }
-        header p { font-size: 1.2em; opacity: 0.9; }
-        .container { max-width: 900px; margin: 30px auto; padding: 20px; }
-        
+        header h1 { margin: 0; font-size: 3em; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header p { font-size: 1.3em; opacity: 0.95; margin-top: 10px; }
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+
         /* Dynamic Cards */
-        .card { 
-            background: #1e1e1e; 
-            padding: 20px 25px; 
-            margin: 20px 0; 
-            border-radius: 12px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-            transition: transform 0.3s, border-left 0.3s; 
-            cursor: pointer; 
+        .card {
+            background: #161b22;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s, border-left 0.3s;
+            border: 1px solid #30363d;
         }
-        .card:hover { 
-            transform: translateY(-8px); 
-            border-left: 5px solid #a777e3; 
+        .card:hover {
+            transform: translateY(-5px);
+            border-left: 5px solid #00c6ff;
         }
-        .card h3 { color: #a777e3; margin-top: 0; }
-        
+        .card h3 { color: #58a6ff; margin-top: 0; font-size: 1.4em; }
+        .card p { line-height: 1.6; color: #8b949e; }
+
         /* Interactive Elements */
-        .dynamic-btn { 
-            background-color: #a777e3; 
-            color: white; 
-            border: none; 
-            padding: 12px 25px; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            font-size: 1.1em; 
-            font-weight: bold;
-            transition: background 0.3s, transform 0.2s; 
-        }
-        .dynamic-btn:hover { background-color: #6e8efb; transform: scale(1.05); }
-        
-        #time-display { 
-            font-weight: bold; 
-            color: #ffeb3b; 
-            margin-top: 15px; 
+        .dynamic-btn {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
             font-size: 1.1em;
-            background: rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .dynamic-btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4); }
+
+        #time-display {
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 20px;
+            font-size: 1.1em;
+            background: rgba(0,0,0,0.3);
             display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         /* Skills Tags */
-        .skills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
-        .skill-tag { 
-            background: #333; 
-            padding: 8px 15px; 
-            border-radius: 20px; 
-            font-size: 0.95em; 
-            border: 1px solid #555;
+        .skills { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+        .skill-tag {
+            background: #21262d;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            border: 1px solid #30363d;
+            color: #58a6ff;
+            font-weight: 500;
         }
-        
+
         /* Light Theme Classes */
-        .light-mode { background-color: #f4f4f9; color: #333; }
-        .light-mode .card { background: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); color: #333;}
-        .light-mode .skill-tag { background: #e0e0e0; color: #000; border-color: #ccc;}
+        .light-mode { background-color: #f6f8fa; color: #24292f; }
+        .light-mode .card { background: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #d0d7de; }
+        .light-mode .card h3 { color: #0969da; }
+        .light-mode .card p { color: #57606a; }
+        .light-mode .skill-tag { background: #ddf4ff; color: #0969da; border-color: #54aeff; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to My Workspace</h1>
-        <p>Exploring the Future of Technology & Development</p>
+        <h1>Ravindra Patel</h1>
+        <p>BCA Student @ Silver Oak College of Computer Application (SOCCA)</p>
+        <p style="font-size: 1.1em; opacity: 0.8;">Innovating in AI, Machine Learning & IoT</p>
         <div id="time-display">Loading time...</div>
     </header>
 
     <div class="container">
-        <h2>My Core Skills</h2>
+        <h2>🛠️ Technical Arsenal</h2>
         <div class="skills">
-            <span class="skill-tag">Artificial Intelligence & ML</span>
-            <span class="skill-tag">Internet of Things (IoT)</span>
-            <span class="skill-tag">Data Visualization</span>
-            <span class="skill-tag">Web Development</span>
+            <span class="skill-tag">Artificial Intelligence</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">IoT Applications & Smart Systems</span>
+            <span class="skill-tag">Data Visualization (Power BI)</span>
         </div>
 
-        <h2>Featured Projects</h2>
-        
-        <div class="card" onclick="alert('Opening details for AI Project...')">
-            <h3>🤖 AI & Machine Learning Model</h3>
-            <p>A smart prediction system designed to analyze data patterns and provide accurate outputs.</p>
+        <h2>🚀 Experience & Hackathons</h2>
+        <div class="card">
+            <h3>ADS Foundation - Internship</h3>
+            <p>Selected for a professional internship program, gaining practical industry exposure and applying academic knowledge to real-world scenarios.</p>
+        </div>
+        <div class="card">
+            <h3>Brahma Code 2.0 Hackathon</h3>
+            <p>Participated in the competitive coding and development hackathon at SKIPS University, demonstrating problem-solving skills under pressure.</p>
         </div>
 
-        <div class="card" onclick="alert('Opening details for IoT System...')">
-            <h3>🌐 Smart IoT Applications</h3>
-            <p>Connecting hardware devices through the internet to create automated smart environments.</p>
+        <h2>💻 Academic Focus & Projects</h2>
+        <div class="card">
+            <h3>🌐 IoT Smart Systems</h3>
+            <p>Working on internet-connected devices, communication units, and automation setups as part of advanced coursework.</p>
         </div>
-
-        <div class="card" onclick="alert('Opening details for Data Dashboard...')">
-            <h3>📊 Interactive Data Dashboard</h3>
-            <p>Transforming complex datasets into visually appealing and easy-to-understand reports.</p>
+        <div class="card">
+            <h3>📊 Power BI Analytics Dashboard</h3>
+            <p>Building comprehensive reporting tools utilizing Matrix visuals, Column charts, and Bar charts to transform raw data into actionable insights.</p>
         </div>
 
         <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-            <button class="dynamic-btn" onclick="toggleTheme()">🌓 Change Theme</button>
+            <button class="dynamic-btn" onclick="toggleTheme()">🌓 Toggle Light/Dark Mode</button>
         </div>
     </div>
 
     <script>
-        // JavaScript for Dynamic Live Clock
+        // Dynamic Live Clock
         function updateTime() {
             const now = new Date();
-            document.getElementById('time-display').innerText = "Live Time: " + now.toLocaleTimeString();
+            document.getElementById('time-display').innerText = "Live Time: " + now.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' });
         }
         setInterval(updateTime, 1000);
         updateTime();
 
-        // JavaScript for Dynamic Theme Toggle
+        // Theme Toggle
         function toggleTheme() {
             document.body.classList.toggle('light-mode');
         }
