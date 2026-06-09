@@ -53,6 +53,7 @@
             font-size: 1.1em;
             font-weight: bold;
             transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
         }
         .dynamic-btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4); }
 
@@ -80,12 +81,32 @@
             font-weight: 500;
         }
 
+        /* Form Styling */
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            background: #21262d;
+            color: white;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 1em;
+        }
+        input:focus, textarea:focus {
+            border-color: #00c6ff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 198, 255, 0.3);
+        }
+
         /* Light Theme Classes */
         .light-mode { background-color: #f6f8fa; color: #24292f; }
         .light-mode .card { background: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #d0d7de; }
         .light-mode .card h3 { color: #0969da; }
         .light-mode .card p { color: #57606a; }
         .light-mode .skill-tag { background: #ddf4ff; color: #0969da; border-color: #54aeff; }
+        .light-mode input, .light-mode textarea { background: #ffffff; color: #000; border: 1px solid #d0d7de; }
     </style>
 </head>
 <body>
@@ -121,13 +142,26 @@
             <h3>🌐 IoT Smart Systems</h3>
             <p>Working on internet-connected devices, communication units, and automation setups as part of advanced coursework.</p>
         </div>
+
+        <h2>📩 Get In Touch</h2>
         <div class="card">
-            <h3>📊 Power BI Analytics Dashboard</h3>
-            <p>Building comprehensive reporting tools utilizing Matrix visuals, Column charts, and Bar charts to transform raw data into actionable insights.</p>
+            <p>Have a project idea or want to connect? Send me a message!</p>
+            
+            <form action="https://formsubmit.co/patelravindra432.email@gmail.com" method="POST">
+                
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email Address" required>
+                <textarea name="Message" placeholder="Write your message here..." rows="4" required></textarea>
+                
+                <button type="submit" class="dynamic-btn">Send Message 🚀</button>
+            </form>
         </div>
 
         <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-            <button class="dynamic-btn" onclick="toggleTheme()">🌓 Toggle Light/Dark Mode</button>
+            <button class="dynamic-btn" onclick="toggleTheme()" style="background: #333;">🌓 Toggle Light/Dark Mode</button>
         </div>
     </div>
 
