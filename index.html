@@ -40,9 +40,7 @@
             border-left: 5px solid #00c6ff;
         }
         .card h3 { color: #58a6ff; margin-top: 0; font-size: 1.3em; }
-        .card p { line-height: 1.6; color: #8b949e; margin-bottom: 0; }
-        .card ul { margin-top: 10px; padding-left: 20px; color: #8b949e; }
-        .card li { margin-bottom: 5px; }
+        .card p { line-height: 1.6; color: #8b949e; margin-bottom: 10px; }
 
         /* Buttons & Badges */
         .dynamic-btn {
@@ -55,9 +53,18 @@
             font-size: 1.05em;
             font-weight: bold;
             transition: transform 0.2s, box-shadow 0.2s;
-            margin-top: 10px;
+            margin-top: 5px;
+            text-decoration: none;
+            display: inline-block;
         }
         .dynamic-btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4); }
+
+        .btn-live {
+            background: linear-gradient(135deg, #4fb81c, #28a745);
+            font-size: 0.9em;
+            padding: 8px 20px;
+        }
+        .btn-live:hover { box-shadow: 0 4px 15px rgba(79, 184, 28, 0.4); }
 
         #time-display {
             font-weight: bold;
@@ -106,7 +113,7 @@
         .light-mode { background-color: #f6f8fa; color: #24292f; }
         .light-mode .card { background: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #d0d7de; }
         .light-mode .card h3 { color: #0969da; }
-        .light-mode .card p, .light-mode .card ul { color: #57606a; }
+        .light-mode .card p { color: #57606a; }
         .light-mode .skill-tag { background: #ddf4ff; color: #0969da; border-color: #54aeff; }
         .light-mode input, .light-mode textarea { background: #ffffff; color: #000; border: 1px solid #d0d7de; }
     </style>
@@ -137,10 +144,11 @@
             <span class="skill-tag">HTML / CSS / JavaScript</span>
         </div>
 
-        <h2>💻 Academic Focus Areas</h2>
+        <h2>💻 Featured Projects & Academic Focus</h2>
         <div class="card">
-            <h3>🌐 IoT Applications & Smart Systems</h3>
-            <p>Studying internet-connected smart devices, automation, and core communication hardware setups.</p>
+            <h3>🌐 Smart Environment Monitor (Live IoT Dashboard)</h3>
+            <p>Developed a dynamic, real-time web dashboard simulating an IoT smart system. It fetches live environmental data (temperature and wind speed) using APIs.</p>
+            <a href="https://patelravindra432-blip.github.io/smart-iot-project/" target="_blank" class="dynamic-btn btn-live">🟢 View Live Project</a>
         </div>
         <div class="card">
             <h3>📊 Data Visualization & Reporting</h3>
